@@ -1,0 +1,91 @@
+{
+    "createdBy": "Redirector v3.5.3",
+    "createdAt": "2020-09-18T00:00:09.291Z",
+    "redirects": [
+        {
+            "description": "Example redirect, try going to http://example.com/anywordhere",
+            "exampleUrl": "http://example.com/some-word-that-matches-wildcard",
+            "exampleResult": "https://google.com/search?q=some-word-that-matches-wildcard",
+            "error": null,
+            "includePattern": "http://example.com/*",
+            "excludePattern": "",
+            "patternDesc": "Any word after example.com leads to google search for that word.",
+            "redirectUrl": "https://google.com/search?q=$1",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Reddit",
+            "exampleUrl": "https://reddit.com/r/aaa",
+            "exampleResult": "https://reddit.premii.com/#/r/aaa",
+            "error": null,
+            "includePattern": "(?:https://www.)?reddit.com/(.*)",
+            "excludePattern": "",
+            "patternDesc": "Redirect to another Reddit \"client\"",
+            "redirectUrl": "https://reddit.premii.com/#/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "invidious",
+            "exampleUrl": "http://youtu.be/watch?v=abcd",
+            "exampleResult": "https:/invidious.snopyta.org/watch?v=abcd",
+            "error": null,
+            "includePattern": "https?://(?:(?:www\\.)(?:you|hook)tube.com|youtu\\.be)/?(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https:/invidious.snopyta.org/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Twitter",
+            "exampleUrl": "https://www.twitter.com/aaa",
+            "exampleResult": "https://www.nitter.net/aaa",
+            "error": null,
+            "includePattern": "(?:https://www.)?twitter.com/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://www.nitter.net/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Instagram",
+            "exampleUrl": "instagram.com/aaa",
+            "exampleResult": "https://bibliogram.pussthecat.org/u/aaa",
+            "error": null,
+            "includePattern": "(?:https://www.)?instagram.com/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://bibliogram.pussthecat.org/u/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        }
+    ]
+}
